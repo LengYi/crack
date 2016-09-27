@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'crack' target in the 'crack' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
