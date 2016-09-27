@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		587263C31D9A709100202363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587263C21D9A709100202363 /* Foundation.framework */; };
 		587263CE1D9A709100202363 /* crack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 587263CD1D9A709100202363 /* crack.mm */; };
+		587263DF1D9A736B00202363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587263C21D9A709100202363 /* Foundation.framework */; };
+		587263E71D9A73D800202363 /* cracklib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 587263E61D9A73D800202363 /* cracklib.mm */; };
+		587263E91D9A759900202363 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 587263E81D9A759900202363 /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		587263CC1D9A709100202363 /* crack.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = crack.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		587263CD1D9A709100202363 /* crack.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = crack.mm; sourceTree = "<group>"; };
 		587263D21D9A709100202363 /* crack.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = crack.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/crack.plist; sourceTree = "<group>"; };
+		587263E51D9A736B00202363 /* cracklib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = cracklib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		587263E61D9A73D800202363 /* cracklib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cracklib.mm; sourceTree = "<group>"; };
+		587263E81D9A759900202363 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsubstrate.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +34,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587263E91D9A759900202363 /* libsubstrate.dylib in Frameworks */,
 				587263C31D9A709100202363 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		587263DE1D9A736B00202363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587263DF1D9A736B00202363 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				587263BF1D9A709100202363 /* crack.dylib */,
+				587263E51D9A736B00202363 /* cracklib.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,6 +71,7 @@
 		587263C11D9A709100202363 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				587263E81D9A759900202363 /* libsubstrate.dylib */,
 				587263C21D9A709100202363 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -65,6 +82,7 @@
 			children = (
 				587263CC1D9A709100202363 /* crack.xm */,
 				587263CD1D9A709100202363 /* crack.mm */,
+				587263E61D9A73D800202363 /* cracklib.mm */,
 				587263C51D9A709100202363 /* Package */,
 				587263C91D9A709100202363 /* Supporting Files */,
 			);
@@ -132,6 +150,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		587263E01D9A736B00202363 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +177,25 @@
 			name = crack;
 			productName = crack;
 			productReference = 587263BF1D9A709100202363 /* crack.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		587263DA1D9A736B00202363 /* cracklib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 587263E21D9A736B00202363 /* Build configuration list for PBXNativeTarget "cracklib" */;
+			buildPhases = (
+				587263DB1D9A736B00202363 /* ShellScript */,
+				587263DC1D9A736B00202363 /* Sources */,
+				587263DE1D9A736B00202363 /* Frameworks */,
+				587263E01D9A736B00202363 /* Headers */,
+				587263E11D9A736B00202363 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cracklib;
+			productName = crack;
+			productReference = 587263E51D9A736B00202363 /* cracklib.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -180,6 +224,7 @@
 			projectRoot = "";
 			targets = (
 				587263BE1D9A709100202363 /* crack */,
+				587263DA1D9A736B00202363 /* cracklib */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +256,32 @@
 			shellPath = /bin/sh;
 			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
 		};
+		587263DB1D9A736B00202363 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		587263E11D9A736B00202363 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,6 +290,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				587263CE1D9A709100202363 /* crack.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		587263DC1D9A736B00202363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587263E71D9A73D800202363 /* cracklib.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +325,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -269,7 +348,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,10 +366,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "crack/crack-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
+				iOSOpenDevDevice = 192.168.2.14;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -307,10 +390,54 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "crack/crack-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
+				iOSOpenDevDevice = 192.168.2.14;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		587263E31D9A736B00202363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "crack/crack-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = 192.168.2.14;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		587263E41D9A736B00202363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "crack/crack-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = 192.168.2.14;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -337,6 +464,16 @@
 				587263D71D9A709100202363 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		587263E21D9A736B00202363 /* Build configuration list for PBXNativeTarget "cracklib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587263E31D9A736B00202363 /* Debug */,
+				587263E41D9A736B00202363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

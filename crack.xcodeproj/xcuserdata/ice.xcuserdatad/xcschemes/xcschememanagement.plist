@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>cracklib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>587263BE1D9A709100202363</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>587263DA1D9A736B00202363</key>
 		<dict>
 			<key>primary</key>
 			<true/>
